@@ -5,21 +5,21 @@ O objetivo do programa é ser um guarda-roupa automatizado, de forma que o usuar
 Linguagem: Python 3
 Banco de Dados: MySQL 5.0.12
 
-# PRÉ-REQUISITOS
+## PRÉ-REQUISITOS
 
 Versão 3 ou superior do Python;
 
-# AUTORES
+## AUTORES
 
 - Isabela Silva de Carvalho
 
-# LINKS
+## LINKS
 
 GitHub: https://github.com/isaCarvalho/projeto_python
 
-# FUNCIONALIDADES
+## FUNCIONALIDADES
 
-## MENU PRINCIPAL
+### MENU PRINCIPAL
 
 O menu principal eh composto de duas opcoes:
 
@@ -28,7 +28,7 @@ O menu principal eh composto de duas opcoes:
 3. Sair
 
 
-### 1.1 MENU USUARIO 1
+#### 1.1 MENU USUARIO 1
 
 - A primeira opcao do menu principal leva ao menu de usuario, apenas com as opcoes:
 
@@ -38,7 +38,7 @@ O menu principal eh composto de duas opcoes:
 
 - Opção 2: o usuario ira digitar seus dados cadastrais e podera logar assim que estiver cadastrado;
 
-### 1.2 MENU USUARIO 2
+#### 1.2 MENU USUARIO 2
 
 - Na primeira opcao do menu de usuario, o usuario irá logar no sistema. Apenas com ele logado conseguira ir para o menu de roupas e demais opcoes do menu de usuario, que são:
 
@@ -48,7 +48,7 @@ O menu principal eh composto de duas opcoes:
 
 - Opção 1: o usuario ira selecionar o dado a ser alterado e logo depois voltará ao menu principal
 
-### 1.3 MENU ROUPAS
+#### 1.3 MENU ROUPAS
 
 No menu roupas estarão todas as opcoes relacionadas a roupa
 
@@ -63,14 +63,14 @@ No menu roupas estarão todas as opcoes relacionadas a roupa
 - Opção 3: O usuario selecionará qual campo ele deseja alterar, e logo após a alteração, voltará ao menu roupas
 - Opção 4: Exclui uma roupa permanentemente, ou seja, exclui o registro da roupa no banco de dados
 
-## O USUARIO NAO PRECISA ESTAR LOGADO PARA UTILIZAR AS OPÇÕES DE RELATÓRIOS
+### O USUARIO NAO PRECISA ESTAR LOGADO PARA UTILIZAR AS OPÇÕES DE RELATÓRIOS
 
-### 2.1 MENU RELATORIO 1
+#### 2.1 MENU RELATORIO 1
 
 1. Visualizar
 2. Estatisticas
 
-### 2.2 VISUALIZAR
+#### 2.2 VISUALIZAR
 
 Imprime todos os usuarios (identificador, nome, email) ordenados por nome
 
@@ -86,7 +86,7 @@ Logo em seguida, o usuario selecionará como ele deseja visualizar as roupas:
 
 Após o modo de visualização ser selecionado, o programa voltará ao menu principal
 
-### 2.3 ESTATISTICAS
+#### 2.3 ESTATISTICAS
 
 1. Grafico de roupas por usuarios
 2. Porcentagens
@@ -94,7 +94,7 @@ Após o modo de visualização ser selecionado, o programa voltará ao menu prin
 - Opção 1: Será gerado um gráfico da quantidade de roupas por usuario em formato ".png".
 OBS: Este gráfico deverá ser salvo na pasta "graphics"
 
-### 2.4 PORCENTAGENS
+#### 2.4 PORCENTAGENS
 
 1. Roupas por categoria
 2. Roupas por tamanho
@@ -113,6 +113,6 @@ Logo após, o programa voltará ao menu principal
 
 - Opção 4: Mostrará a porcentagem de usuarios desativados. Logo após, o programa voltará ao menu principal.
 
-## LIMITAÇÕES
+### LIMITAÇÕES
 
 **O programa não gera combinações de peças de roupas.**
