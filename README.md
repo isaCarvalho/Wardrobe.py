@@ -13,6 +13,10 @@ Versão 3 ou superior do Python;
 
 - Isabela Silva de Carvalho
 
+# LINKS
+
+GitHub: https://github.com/isaCarvalho/projeto_python
+
 # FUNCIONALIDADES
 
 ## MENU PRINCIPAL
