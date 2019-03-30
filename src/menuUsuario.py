@@ -2,6 +2,7 @@ from cadastro import Cadastro
 from cadastroUsuario import CadastroUsuario
 from menuRoupa import MenuRoupa
 from getpass import getpass
+from relatorio import Relatorio
 
 class MenuUsuario():
     """ Modulo que contem a classe MenuUsuario """
@@ -50,17 +51,20 @@ class MenuUsuario():
 
             while (True):
                 print("\n-----------------------------------------------\n")
-                op = Cadastro().validarInteiro(mensagem="Digite a opcao desejada:\n\n1 - Alterar dados\n2 - Menu Roupas\n3 - Sair\n")
+                op = Cadastro().validarInteiro(mensagem="Digite a opcao desejada:\n\n1 - Meus dados\n2 - Alterar dados\n3 - Menu Roupas\n4 - Sair\n")
                 
                 if (op == 1):
+                    Relatorio().imprimirPorId(self=Relatorio, id_user=id_user)
+
+                elif (op == 2):
                     print("\n-----------------------------------------------\n")
                     CadastroUsuario().alterarUsuario(self=CadastroUsuario, id_usuario=id_user)
                     return self.menu_inicial()
 
-                elif (op == 2):
+                elif (op == 3):
                     MenuRoupa().menu_roupa(self=MenuRoupa, id_user=id_user)
 
-                elif (op == 3):
+                elif (op == 4):
                     exit()
 
                 else:

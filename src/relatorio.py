@@ -44,6 +44,11 @@ class Relatorio():
 
         return pd.DataFrame(dic)
 
+    @staticmethod
+    def imprimirPorId(self, id_user):
+        """ Metodo que imprime todos os campos de um usuario por id """
+        # Trocar para pesquisar no dataframe depois
+        print(Cadastro().executarSelect(query="SELECT * FROM users WHERE id_user = {:d}".format(id_user)))
     
     @staticmethod
     def imprimirUsuarios(self):
@@ -107,10 +112,10 @@ class Relatorio():
 
     @staticmethod
     def roupasPorNome(self, id_user):
-        """ Metodo que imprime roupas por id de usuario """
+        """ Metodo que imprime roupas que estao ativas por id de usuario """
 
         dic = {
-            "ID_ROUPA": self.listaSelect(query="SELECT id_roupa FROM roupas WHERE id_user = '{:d}'".format(id_user)),
+            "ID": self.listaSelect(query="SELECT id_roupa FROM roupas WHERE id_user = '{:d}'".format(id_user)),
             "CATEGORIA": self.listaSelect(query="SELECT categoria FROM roupas WHERE id_user = '{:d}'".format(id_user)),
             "DESCRICAO": self.listaSelect(query="SELECT descricao FROM roupas WHERE id_user = '{:d}'".format(id_user)),
             "TAMANHO": self.listaSelect(query="SELECT tamanho FROM roupas WHERE id_user = '{:d}'".format(id_user)),
@@ -119,7 +124,7 @@ class Relatorio():
     
         t_roupa = pd.DataFrame(dic)
         
-        roupa = t_roupa.loc[:, ["ID_ROUPA", "CATEGORIA", "DESCRICAO", "TAMANHO", "ATIVO"]]
+        roupa = t_roupa.loc[:, ["ID", "CATEGORIA", "DESCRICAO", "TAMANHO", "ATIVO"]]
 
         print("\n-----------------------------------------------\n")
         print(roupa)

@@ -25,14 +25,14 @@ class CadastroRoupa(Cadastro):
     def cadastrarRoupa(self, id_user):
         """ Metodo que recebe do usuario as caracteristicas da roupa e salva no banco de dados """
         
-        categoria = super().validarCampo(self=Cadastro, lista=self.lista_categorias, mensagem="Digite a categoria: ")    
         categoria = categoria.lower()
-
+        categoria = super().validarCampo(self=Cadastro, lista=self.lista_categorias, mensagem="Digite a categoria: ")    
+        
         descricao = super().validarString(self=Cadastro, mensagem="Digite a descricao: ")
 
-        tamanho = super().validarCampo(self=Cadastro, lista=self.lista_tamanhos, mensagem="Digite o tamanho: ")
         tamanho = tamanho.lower()
-
+        tamanho = super().validarCampo(self=Cadastro, lista=self.lista_tamanhos, mensagem="Digite o tamanho: ")
+        
         id_usuario = id_user
 
         super().executarQuery(self=Cadastro, query="INSERT INTO roupas (categoria, descricao, tamanho, ativo, id_user) VALUES ('{}', '{}', '{}', '{:d}', '{:d}')".format(
