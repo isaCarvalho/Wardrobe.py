@@ -42,11 +42,13 @@ O menu principal eh composto de duas opcoes:
 
 - Na primeira opcao do menu de usuario, o usuario irá logar no sistema. Apenas com ele logado conseguira ir para o menu de roupas e demais opcoes do menu de usuario, que são:
 
-1. Alterar dados
-2. Menu roupas
-3. Sair
+1. Meus dados 
+2. Alterar dados
+3. Menu roupas
+4. Sair
 
-- Opção 1: o usuario ira selecionar o dado a ser alterado e logo depois voltará ao menu principal
+- Opção 1: o usuario irá vizualizar seus dados armazenados e voltará ao menu principal
+- Opção 2: o usuario ira selecionar o dado a ser alterado e logo depois voltará ao menu principal
 
 #### 1.3 MENU ROUPAS
 
