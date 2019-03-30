@@ -30,6 +30,17 @@ class Relatorio():
     def listaSelect(query):
         return [ tupla[0] for tupla in Cadastro.executarSelect(self=Cadastro, query=query) ]
 
+    def listaAtivo(self, query):
+        lista_ativo = []
+        lista_at = self.listaSelect(query=query)
+        for at in lista_at:
+            if (at == 0):
+                lista_ativo.append("Nao")
+            else:
+                lista_ativo.append("Sim")
+        
+        return lista_ativo
+
     @staticmethod
     def usuarios(self):
         """ Metodo que constroi o DataFrame com todos os campos do usuario """
@@ -39,7 +50,7 @@ class Relatorio():
             "NOME": self.listaSelect(query="SELECT nome FROM users"),
             "EMAIL": self.listaSelect(query="SELECT email FROM users"),
             "SENHA": self.listaSelect(query="SELECT senha FROM users"),
-            "ATIVO": self.listaSelect(query="SELECT ativo FROM users")
+            "ATIVO": self.listaAtivo(self=Relatorio, query="SELECT ativo FROM users")
         }
 
         return pd.DataFrame(dic)
@@ -73,7 +84,7 @@ class Relatorio():
             "CATEGORIA": self.listaSelect(query="SELECT categoria FROM roupas"),
             "DESCRICAO": self.listaSelect(query="SELECT descricao FROM roupas"),
             "TAMANHO": self.listaSelect(query="SELECT tamanho FROM roupas"),
-            "ATIVO": self.listaSelect(query="SELECT ativo FROM roupas"),
+            "ATIVO": self.listaAtivo(self=Relatorio, query="SELECT ativo FROM roupas"),
             "ID_USER": self.listaSelect(query="SELECT id_user FROM roupas")
         }
     
@@ -119,7 +130,7 @@ class Relatorio():
             "CATEGORIA": self.listaSelect(query="SELECT categoria FROM roupas WHERE id_user = '{:d}'".format(id_user)),
             "DESCRICAO": self.listaSelect(query="SELECT descricao FROM roupas WHERE id_user = '{:d}'".format(id_user)),
             "TAMANHO": self.listaSelect(query="SELECT tamanho FROM roupas WHERE id_user = '{:d}'".format(id_user)),
-            "ATIVO": self.listaSelect(query="SELECT ativo FROM roupas WHERE id_user = '{:d}'".format(id_user))
+            "ATIVO": self.listaAtivo(self=Relatorio, query="SELECT ativo FROM roupas WHERE id_user = '{:d}'".format(id_user))
         }
     
         t_roupa = pd.DataFrame(dic)

@@ -59,7 +59,7 @@ class MenuUsuario():
                 elif (op == 2):
                     print("\n-----------------------------------------------\n")
                     CadastroUsuario().alterarUsuario(self=CadastroUsuario, id_usuario=id_user)
-                    return self.menu_inicial()
+                    exit()
 
                 elif (op == 3):
                     MenuRoupa().menu_roupa(self=MenuRoupa, id_user=id_user)
